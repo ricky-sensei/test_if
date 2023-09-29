@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>画像切り替え</title>
+</head>
+<body>
+    <!-- 画像を表示する要素 -->
+    <img id="responsiveImage" src="" alt="Responsive Image">
+    <script>
+        // スクリーンの横幅を取得
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        // 画像を表示する要素を取得
+        var imageElement = document.getElementById("responsiveImage");
+        // スクリーンの横幅に応じて画像を切り替える
+        if (screenWidth < 768) {
+            imageElement.src = "small-image.jpg"; // スクリーン幅が小さい場合の画像
+        } else if (screenWidth < 1024) {
+            imageElement.src = "medium-image.jpg"; // スクリーン幅が中くらいの場合の画像
+        } else {
+            imageElement.src = "large-image.jpg"; // スクリーン幅が大きい場合の画像
+        }
+    </script>
+</body>
+</html>
